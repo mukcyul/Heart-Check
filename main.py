@@ -14,17 +14,19 @@ from scrollLabel import *
 from instructions import *
 from ruffier import *
 
+#Нужные данные
 age = 0
 name = ''
 pulse1 = 0
 pulse2 = 0
 pulse3 = 0
 
-
+#Функция получения результаты
 def get_result():
     res = test(pulse1, pulse2, pulse3, age)
     return name + '\n' + res[0] + '\n' + res[1] 
 
+#Класс для пролистывания текста
 class ScrButton(Button):
     def __init__(self,screen,direction = 'right', goal = 'main', **params):
         super().__init__(**params)
@@ -32,10 +34,11 @@ class ScrButton(Button):
         self.direction = direction
         self.goal = goal
 
+#Функция нажатия
 def on_press(self):
     self.screen.manager.transition.direction = self.direction
     self.screen.manager.current = self.goal
-
+    
 class MainScr(Screen):
     def __init__(self, name = 'main'):
         super().__init__(name=name)
