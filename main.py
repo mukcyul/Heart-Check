@@ -1,6 +1,7 @@
 # готовый ScrButton
 # заготовки FirstScr, SecondScr, ThirdScr, FourthScr
 # переход работает
+######
 from kivy.app import App
 from kivy.uix.button import Button
 from kivy.uix.label import Label
